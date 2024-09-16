@@ -1,4 +1,4 @@
-
+import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 export const nextConfig = {
   typescript: {
@@ -14,7 +14,7 @@ export default withSentryConfig(
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
-    org: "javascript-mastery",
+    org: "personal-portfolio",
     project: "care-pulse",
 
     // Only print logs for uploading source maps in CI
