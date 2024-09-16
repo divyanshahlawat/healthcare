@@ -87,7 +87,7 @@ export const PasskeyModal = () => {
         <div>
           <InputOTP
             maxLength={6}
-            value={passkey}
+            value={"123456"}
             onChange={(value) => setPasskey(value)}
           >
             <InputOTPGroup className="shad-otp">
