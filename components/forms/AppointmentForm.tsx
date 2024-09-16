@@ -54,7 +54,7 @@ export const AppointmentForm = ({
   });
 
   const onSubmit = async (
-    values: z.infer<typeof AppointmentFormValidation>,
+    values: z.infer<typeof AppointmentFormValidation>
   ) => {
     setIsLoading(true);
 
@@ -87,7 +87,7 @@ export const AppointmentForm = ({
         if (newAppointment) {
           form.reset();
           router.push(
-            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`,
+            `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`
           );
         }
       } else {
@@ -101,6 +101,7 @@ export const AppointmentForm = ({
             cancellationReason: values.cancellationReason,
           },
           type,
+          timeZone: "UTC",
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
